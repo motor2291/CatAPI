@@ -7,29 +7,42 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 protocol VoteManagerDelegate {
     func didUpdataImage(vote: VoteModel)
+    func saveFavData(vote: VoteModel)
     func didFailWithError(error: Error)
 }
 
 struct VoteManager {
     
     var delegate: VoteManagerDelegate?
-    
     let baseURL = "https://api.thecatapi.com/v1/images/search"
     let apiKey = "3135a0e2-1fb4-4739-bac9-3cca33874ff0"
     
-    func fetchCatData() {
-        //let urlString = "https://api.thecatapi.com/v1/images/search?mime_types=gif"
+    func performSaveFav() {
         let urlString = "\(baseURL)?apikey=\(apiKey)"
-        performRequest(with: urlString)
+        if let url = URL(string: urlString) {
+            URLSession(configuration: .default).dataTask(with: url) { data, response, error in
+                if error != nil {
+                    self.delegate?.didFailWithError(error: error!)
+                    return
+                }
+                if let safeData = data {
+                    if let vote = self.parseJSON(safeData) {
+                        self.delegate?.saveFavData(vote: vote)
+                        self.delegate?.didUpdataImage(vote: vote)
+                    }
+                }
+            }.resume()
+        }
     }
     
-    func performRequest(with urlString: String) {
+    func performRequest() {
+        let urlString = "\(baseURL)?apikey=\(apiKey)"
         if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { data, response, error in
+            URLSession(configuration: .default).dataTask(with: url) { data, response, error in
                 if error != nil {
                     self.delegate?.didFailWithError(error: error!)
                     return
@@ -39,17 +52,16 @@ struct VoteManager {
                         self.delegate?.didUpdataImage(vote: vote)
                     }
                 }
-            }
-            task.resume()
-        }
+            }.resume()
+        } 
     }
     
     func parseJSON(_ voteData: Data) -> VoteModel? {
-        let decoder = JSONDecoder()
         do {
-            let decodeData = try decoder.decode([VoteData].self, from: voteData)
+            let decodeData = try JSONDecoder().decode([VoteData].self, from: voteData)
             let url = decodeData[0].url
-            let voteModel = VoteModel(url: url)
+            let id = decodeData[0].id
+            let voteModel = VoteModel(id: id, url: url)
             return voteModel
         } catch {
             delegate?.didFailWithError(error: error)

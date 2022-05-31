@@ -1,22 +1,21 @@
 //
-//  DetailImageViewController.swift
+//  DetailFavViewController.swift
 //  CatAPI
 //
-//  Created by motor on 2022/5/26.
+//  Created by motor on 2022/5/31.
 //
-
-import UIKit
 import Kingfisher
+import UIKit
 
-class DetailImageViewController: UIViewController {
+class DetailFavViewController: UIViewController {
+    
+    @IBOutlet weak var favImageView: UIImageView!
+    @IBAction func deleteButton(_ sender: UIBarButtonItem) {
+        deleteFavData()
+    }
     
     var infoFromImageURL: URL?
-    var infoFromImageId: String?
-    
-    @IBOutlet weak var catImage: UIImageView!
-    @IBAction func saveFavButton(_ sender: UIBarButtonItem) {
-        saveFavData()
-    }
+    var infoFromImageId: Int?
     
     override func viewDidLoad() {
         updateImage()
@@ -24,19 +23,16 @@ class DetailImageViewController: UIViewController {
     
     func updateImage() {
         DispatchQueue.main.async {
-            self.catImage.kf.setImage(with: self.infoFromImageURL)
+            self.favImageView.kf.setImage(with: self.infoFromImageURL)
         }
     }
     
-    func saveFavData() {
-        let json: [String: Any] = ["image_id": infoFromImageId!]
-        let url = URL(string: "https://api.thecatapi.com/v1/favourites")!
+    func deleteFavData() {
+        let url = URL(string: "https://api.thecatapi.com/v1/favourites/\(infoFromImageId ?? 666)")!
         var request = URLRequest(url: url)
         request.setValue("3135a0e2-1fb4-4739-bac9-3cca33874ff0", forHTTPHeaderField: "x-api-key")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = try? JSONSerialization.data(withJSONObject: json)
-        
+        request.httpMethod = "DELETE"
+
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")

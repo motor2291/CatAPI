@@ -14,6 +14,13 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBAction func refreshButton(_ sender: UIBarButtonItem) {
         fetchImageData(category: selectedDictionary["category"]!, catType: selectedDictionary["type"]!)
     }
+    @IBAction func pickerViewDisplay(_ sender: UIBarButtonItem) {
+        if categoryPicker.isHidden {
+            categoryPicker.isHidden = false
+        } else {
+            categoryPicker.isHidden = true
+        }
+    }
     
     // 取得螢幕的尺寸
     var fullScreenSize :CGSize! = UIScreen.main.bounds.size
@@ -26,10 +33,10 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
     let typeDictionary = ["All": "", "Static": "mime_types=jpg,png", "Animated": "mime_types=gif"]
     
     func fetchImageData(category: String, catType: String) {
-        let urlString = "\(baseURL)?apikey=\(apiKey)&limit=12&\(category)&\(catType)"
+        let urlString = "\(baseURL)?apikey=\(apiKey)&limit=90&\(category)&\(catType)"
 
         let url = URL(string: urlString)!
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, response, error in
             if let safeData = data {
                 do {
                     self.imageModel = try JSONDecoder().decode([ImageModel].self, from: safeData)
@@ -38,17 +45,18 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
                 }
                 DispatchQueue.main.async {
                     self.myCollectionView.reloadData()
+                    self.myCollectionView.setContentOffset(.init(x: 0, y: -70), animated: true)
                 }
             }
-        }
-        task.resume()
+        }.resume()
     }
     
     override func viewDidLoad() {
+        categoryPicker.isHidden = true
         super.viewDidLoad()
         
         // 設置底色
-        self.view.backgroundColor = UIColor.black
+        self.view.backgroundColor = UIColor.systemBackground
 
         // 建立 UICollectionViewFlowLayout
         let layout = UICollectionViewFlowLayout()
@@ -106,8 +114,6 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
     // 點選 cell 後執行的動作
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetail", sender: indexPath)
-        print("你選擇了第 \(indexPath.section + 1) 組的")
-        print("第 \(indexPath.item + 1) 張圖片")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -116,6 +122,7 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
                 let selectedIndexPath = sender as? NSIndexPath
                 if let selectRow = selectedIndexPath?.row {
                     dvc.infoFromImageURL = imageModel[selectRow].url
+                    dvc.infoFromImageId = imageModel[selectRow].id
                 }
             }
         }
@@ -151,11 +158,13 @@ extension ImageViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             let typeValue = typeDictionary["\(typeKey[row])"]!
             selectedDictionary.updateValue(typeValue, forKey: "type")
             fetchImageData(category: selectedDictionary["category"]!, catType: selectedDictionary["type"]!)
+            categoryPicker.isHidden = true
         } else {
             let categoryKey = [String](categoryDictionary.keys.sorted())
             let categoryValue = categoryDictionary["\(categoryKey[row])"]!
             selectedDictionary.updateValue(categoryValue, forKey: "category")
             fetchImageData(category: selectedDictionary["category"]!, catType: selectedDictionary["type"]!)
+            categoryPicker.isHidden = true
         }
     }
 }

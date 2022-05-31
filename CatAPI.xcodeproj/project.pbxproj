@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		972FF0252840CCC90071AABE /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972FF0242840CCC90071AABE /* FavouriteModel.swift */; };
 		9731AB342837B6BC00A5BCAA /* BreedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */; };
+		978226462845C7D0006BB0D5 /* DetailFavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978226452845C7D0006BB0D5 /* DetailFavViewController.swift */; };
 		978D57FB28363C7C007DEE2E /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D57FA28363C7C007DEE2E /* BreedModel.swift */; };
 		978E8121283244C600EB953B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978E8120283244C600EB953B /* AppDelegate.swift */; };
 		978E8123283244C600EB953B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978E8122283244C600EB953B /* SceneDelegate.swift */; };
@@ -20,6 +22,7 @@
 		978E81462834D67700EB953B /* VoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978E81452834D67700EB953B /* VoteModel.swift */; };
 		9797BE72283A7AC400D79BEE /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */; };
 		9797BE87283A970800D79BEE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9797BE86283A970800D79BEE /* ImageModel.swift */; };
+		97BD6A612844A258003B7BF6 /* FavCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */; };
 		97DC21F72837F03A00E45429 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC21F62837F03A00E45429 /* DetailViewController.swift */; };
 		97DC21F9283A23A500E45429 /* VoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC21F8283A23A500E45429 /* VoteManager.swift */; };
 		97DED00D283FC0A50075AC2C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 97DED00C283FC0A50075AC2C /* Kingfisher */; };
@@ -27,7 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		972FF0242840CCC90071AABE /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
 		9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewController.swift; sourceTree = "<group>"; };
+		978226452845C7D0006BB0D5 /* DetailFavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavViewController.swift; sourceTree = "<group>"; };
 		978D57FA28363C7C007DEE2E /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		978E811D283244C600EB953B /* CatAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		978E8120283244C600EB953B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		978E81452834D67700EB953B /* VoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteModel.swift; sourceTree = "<group>"; };
 		9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9797BE86283A970800D79BEE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCollectionViewCell.swift; sourceTree = "<group>"; };
 		97DC21F62837F03A00E45429 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		97DC21F8283A23A500E45429 /* VoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteManager.swift; sourceTree = "<group>"; };
 		97DED00E283FC3FC0075AC2C /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				978E8126283244C600EB953B /* Main.storyboard */,
+				9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */,
+				97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,9 +113,9 @@
 				9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */,
 				97DC21F62837F03A00E45429 /* DetailViewController.swift */,
 				978E814128324D8900EB953B /* ImageViewController.swift */,
-				9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */,
 				97DED00E283FC3FC0075AC2C /* DetailImageViewController.swift */,
 				978E814328324DBC00EB953B /* FavViewController.swift */,
+				978226452845C7D0006BB0D5 /* DetailFavViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 				978E81452834D67700EB953B /* VoteModel.swift */,
 				978D57FA28363C7C007DEE2E /* BreedModel.swift */,
 				9797BE86283A970800D79BEE /* ImageModel.swift */,
+				972FF0242840CCC90071AABE /* FavouriteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +214,9 @@
 				978E813D28324C7000EB953B /* VoteViewController.swift in Sources */,
 				97DC21F9283A23A500E45429 /* VoteManager.swift in Sources */,
 				97DED00F283FC3FC0075AC2C /* DetailImageViewController.swift in Sources */,
+				972FF0252840CCC90071AABE /* FavouriteModel.swift in Sources */,
+				97BD6A612844A258003B7BF6 /* FavCollectionViewCell.swift in Sources */,
+				978226462845C7D0006BB0D5 /* DetailFavViewController.swift in Sources */,
 				9731AB342837B6BC00A5BCAA /* BreedTableViewController.swift in Sources */,
 				978E814228324D8900EB953B /* ImageViewController.swift in Sources */,
 				978E8121283244C600EB953B /* AppDelegate.swift in Sources */,

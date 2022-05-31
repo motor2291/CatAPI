@@ -17,7 +17,7 @@ class BreedTableViewController: UITableViewController {
     func getBreedData() {
         
         let urlString = "\(baseURL)?apikey=\(apiKey)"
-        let url = URL(string: urlString)!
+        guard let url = URL(string: urlString) else {return}
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let safeData = data {
