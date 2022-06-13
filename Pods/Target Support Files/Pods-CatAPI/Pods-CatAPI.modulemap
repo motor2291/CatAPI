@@ -1,0 +1,6 @@
+framework module Pods_CatAPI {
+  umbrella header "Pods-CatAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

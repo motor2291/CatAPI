@@ -13,7 +13,14 @@ struct BreedModel: Codable {
     let name: String
     let temperament: String
     let breedExplaination: String
-    let energyLevel: Int
+    let energyLevel: Double
+    let adaptability: Double
+    let childFriendly: Double
+    let dogFriendly: Double
+    let intelligence: Double
+    let healthIssues: Double
+    let strangerFriendly: Double
+    let wikipediaUrl: String?
     let isHairless: Bool
     let image: BreedImage?
     
@@ -23,25 +30,15 @@ struct BreedModel: Codable {
         case temperament
         case breedExplaination = "description"
         case energyLevel = "energy_level"
+        case adaptability
+        case childFriendly = "child_friendly"
+        case dogFriendly = "dog_friendly"
+        case intelligence
+        case healthIssues = "health_issues"
+        case strangerFriendly = "stranger_friendly"
+        case wikipediaUrl = "wikipedia_url"
         case isHairless = "hairless"
         case image
-    }
-    
-    var energyImage: String {
-        switch energyLevel {
-        case 1:
-            return "1.square.fill"
-        case 2:
-            return "2.square.fill"
-        case 3:
-            return "3.square.fill"
-        case 4:
-            return "4.square.fill"
-        case 5:
-            return "5.square.fill"
-        default:
-            return "multiply"
-        }
     }
     
     //MARK: - Change isHairless from Int to Bool
@@ -52,8 +49,14 @@ struct BreedModel: Codable {
         name = try values.decode(String.self, forKey: .name)
         temperament = try values.decode(String.self, forKey: .temperament)
         breedExplaination = try values.decode(String.self, forKey: .breedExplaination)
-        let energyImage = try values.decode(Int.self, forKey: .energyLevel)
-        energyLevel = energyImage
+        energyLevel = try values.decode(Double.self, forKey: .energyLevel)
+        adaptability = try values.decode(Double.self, forKey: .adaptability)
+        childFriendly = try values.decode(Double.self, forKey: .childFriendly)
+        dogFriendly = try values.decode(Double.self, forKey: .dogFriendly)
+        intelligence = try values.decode(Double.self, forKey: .intelligence)
+        healthIssues = try values.decode(Double.self, forKey: .healthIssues)
+        strangerFriendly = try values.decode(Double.self, forKey: .strangerFriendly)
+        wikipediaUrl = try? values.decode(String.self, forKey: .wikipediaUrl)
         let hairless = try values.decode(Int.self, forKey: .isHairless)
         isHairless = hairless == 1
         image = try values.decodeIfPresent(BreedImage.self, forKey: .image)

@@ -10,6 +10,7 @@
 		972FF0252840CCC90071AABE /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972FF0242840CCC90071AABE /* FavouriteModel.swift */; };
 		9731AB342837B6BC00A5BCAA /* BreedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */; };
 		978226462845C7D0006BB0D5 /* DetailFavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978226452845C7D0006BB0D5 /* DetailFavViewController.swift */; };
+		978723C22853538F00770FC9 /* BreedDetailRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978723C12853538F00770FC9 /* BreedDetailRatingCell.swift */; };
 		978D57FB28363C7C007DEE2E /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D57FA28363C7C007DEE2E /* BreedModel.swift */; };
 		978E8121283244C600EB953B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978E8120283244C600EB953B /* AppDelegate.swift */; };
 		978E8123283244C600EB953B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978E8122283244C600EB953B /* SceneDelegate.swift */; };
@@ -23,16 +24,22 @@
 		9797BE72283A7AC400D79BEE /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */; };
 		9797BE87283A970800D79BEE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9797BE86283A970800D79BEE /* ImageModel.swift */; };
 		97BD6A612844A258003B7BF6 /* FavCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */; };
+		97CF123B2854D80800BE082F /* HyperLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CF123A2854D80800BE082F /* HyperLinkCell.swift */; };
 		97DC21F72837F03A00E45429 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC21F62837F03A00E45429 /* DetailViewController.swift */; };
 		97DC21F9283A23A500E45429 /* VoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC21F8283A23A500E45429 /* VoteManager.swift */; };
 		97DED00D283FC0A50075AC2C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 97DED00C283FC0A50075AC2C /* Kingfisher */; };
 		97DED00F283FC3FC0075AC2C /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DED00E283FC3FC0075AC2C /* DetailImageViewController.swift */; };
+		C25510695FBE3254B0BD8F34 /* Pods_CatAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CD2D7FA5889267AC57C7D8 /* Pods_CatAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19CD2D7FA5889267AC57C7D8 /* Pods_CatAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AA31DA268E8F9C7C0F3B22A /* Pods-CatAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAPI.debug.xcconfig"; path = "Target Support Files/Pods-CatAPI/Pods-CatAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		779EC8351C1872CCD18DD63B /* Pods-CatAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAPI.release.xcconfig"; path = "Target Support Files/Pods-CatAPI/Pods-CatAPI.release.xcconfig"; sourceTree = "<group>"; };
 		972FF0242840CCC90071AABE /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
 		9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewController.swift; sourceTree = "<group>"; };
 		978226452845C7D0006BB0D5 /* DetailFavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavViewController.swift; sourceTree = "<group>"; };
+		978723C12853538F00770FC9 /* BreedDetailRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailRatingCell.swift; sourceTree = "<group>"; };
 		978D57FA28363C7C007DEE2E /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		978E811D283244C600EB953B /* CatAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		978E8120283244C600EB953B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 		9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9797BE86283A970800D79BEE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCollectionViewCell.swift; sourceTree = "<group>"; };
+		97CF123A2854D80800BE082F /* HyperLinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperLinkCell.swift; sourceTree = "<group>"; };
 		97DC21F62837F03A00E45429 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		97DC21F8283A23A500E45429 /* VoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteManager.swift; sourceTree = "<group>"; };
 		97DED00E283FC3FC0075AC2C /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
@@ -59,17 +67,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DED00D283FC0A50075AC2C /* Kingfisher in Frameworks */,
+				C25510695FBE3254B0BD8F34 /* Pods_CatAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		978723C02853535900770FC9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */,
+				9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */,
+				978723C12853538F00770FC9 /* BreedDetailRatingCell.swift */,
+				97CF123A2854D80800BE082F /* HyperLinkCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		978E8114283244C600EB953B = {
 			isa = PBXGroup;
 			children = (
 				978E811F283244C600EB953B /* CatAPI */,
 				978E811E283244C600EB953B /* Products */,
+				CB0D3DD6A05B94495DC68C23 /* Pods */,
+				A5430A97EBC81D8189AA278A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				978E8126283244C600EB953B /* Main.storyboard */,
-				9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */,
-				97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +136,7 @@
 				97DED00E283FC3FC0075AC2C /* DetailImageViewController.swift */,
 				978E814328324DBC00EB953B /* FavViewController.swift */,
 				978226452845C7D0006BB0D5 /* DetailFavViewController.swift */,
+				978723C02853535900770FC9 /* Cell */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -132,6 +153,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A5430A97EBC81D8189AA278A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19CD2D7FA5889267AC57C7D8 /* Pods_CatAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB0D3DD6A05B94495DC68C23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AA31DA268E8F9C7C0F3B22A /* Pods-CatAPI.debug.xcconfig */,
+				779EC8351C1872CCD18DD63B /* Pods-CatAPI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 978E8131283244C600EB953B /* Build configuration list for PBXNativeTarget "CatAPI" */;
 			buildPhases = (
+				2318C196FF06598107897F66 /* [CP] Check Pods Manifest.lock */,
 				978E8119283244C600EB953B /* Sources */,
 				978E811A283244C600EB953B /* Frameworks */,
 				978E811B283244C600EB953B /* Resources */,
+				E7A4E9882C7AD9859C809B2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,11 +244,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2318C196FF06598107897F66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7A4E9882C7AD9859C809B2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatAPI/Pods-CatAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatAPI/Pods-CatAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatAPI/Pods-CatAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		978E8119283244C600EB953B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97CF123B2854D80800BE082F /* HyperLinkCell.swift in Sources */,
 				978E814428324DBC00EB953B /* FavViewController.swift in Sources */,
 				9797BE72283A7AC400D79BEE /* ImageCollectionViewCell.swift in Sources */,
 				978E813D28324C7000EB953B /* VoteViewController.swift in Sources */,
@@ -218,6 +301,7 @@
 				97BD6A612844A258003B7BF6 /* FavCollectionViewCell.swift in Sources */,
 				978226462845C7D0006BB0D5 /* DetailFavViewController.swift in Sources */,
 				9731AB342837B6BC00A5BCAA /* BreedTableViewController.swift in Sources */,
+				978723C22853538F00770FC9 /* BreedDetailRatingCell.swift in Sources */,
 				978E814228324D8900EB953B /* ImageViewController.swift in Sources */,
 				978E8121283244C600EB953B /* AppDelegate.swift in Sources */,
 				978E81462834D67700EB953B /* VoteModel.swift in Sources */,
@@ -366,6 +450,7 @@
 		};
 		978E8132283244C600EB953B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AA31DA268E8F9C7C0F3B22A /* Pods-CatAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -394,6 +479,7 @@
 		};
 		978E8133283244C600EB953B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 779EC8351C1872CCD18DD63B /* Pods-CatAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

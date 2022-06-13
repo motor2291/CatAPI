@@ -9,6 +9,26 @@ import UIKit
 import Kingfisher
 
 class VoteViewController: UIViewController {
+    
+    var voteManager = VoteManager()
+    var buttonCenter: CGPoint = .zero
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        voteManager.delegate = self
+        voteManager.performRequest()
+        
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let titleText = "點選喜歡加入您的最愛"
+        for letter in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.2 * charIndex, repeats: false) { timer in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
+        
+    }
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var catImage: UIImageView!
@@ -22,23 +42,7 @@ class VoteViewController: UIViewController {
         voteManager.performRequest()
     }
     
-    var voteManager = VoteManager()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        voteManager.delegate = self
-        voteManager.performRequest()
-        
-        titleLabel.text = ""
-        var charIndex = 0.0
-        let titleText = "Vote your favorite"
-        for letter in titleText {
-            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { timer in
-                self.titleLabel.text?.append(letter)
-            }
-            charIndex += 1
-        }
-    }
 }
 
 //MARK: - VoteManageDelegate

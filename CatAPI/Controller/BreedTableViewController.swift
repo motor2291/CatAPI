@@ -8,11 +8,17 @@
 import UIKit
 import Kingfisher
 
-class BreedTableViewController: UITableViewController {
+class BreedTableViewController: UITableViewController, UISearchBarDelegate {
     
     var breeds = [BreedModel]()
     let baseURL = "https://api.thecatapi.com/v1/breeds"
     let apiKey = "3135a0e2-1fb4-4739-bac9-3cca33874ff0"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        getBreedData()
+    }
     
     func getBreedData() {
         
@@ -34,11 +40,7 @@ class BreedTableViewController: UITableViewController {
         }
         task.resume()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getBreedData()
-    }
+
     
     // MARK: - Table view data source
     
@@ -60,8 +62,9 @@ class BreedTableViewController: UITableViewController {
         if let imageURL = URL(string: breed.image?.url ?? "No Image") {
             do {
                 let downloadImage = UIImage(data: try Data(contentsOf: imageURL))!
+                //cell.imageView?.kf.cancelDownloadTask()
                 cell.imageView?.image = imageWithImage(image: downloadImage , scaledToSize: CGSize(width: 100, height: 100))
-                //cell.imageView?.kf.setImage(with: imageURL)
+                
             } catch {
                 print(error)
             }
@@ -92,7 +95,14 @@ class BreedTableViewController: UITableViewController {
                     dvc.infoFromBreedTemperament = breeds[selectedRow].temperament
                     dvc.infoFromBreedDescription = breeds[selectedRow].breedExplaination
                     dvc.infoFromBreedHairless = breeds[selectedRow].isHairless
-                    dvc.infoFromBreedEnergy = breeds[selectedRow].energyImage
+                    dvc.infoFromBreedEnergy = breeds[selectedRow].energyLevel
+                    dvc.infoFromBreedAdaptability = breeds[selectedRow].adaptability
+                    dvc.infoFromBreedChildFriendly = breeds[selectedRow].childFriendly
+                    dvc.infoFromBreedDogFriendly = breeds[selectedRow].dogFriendly
+                    dvc.infoFromBreedIntelligence = breeds[selectedRow].intelligence
+                    dvc.infoFromBreedHealthIssues = breeds[selectedRow].healthIssues
+                    dvc.infoFromBreedStrangerFriendly = breeds[selectedRow].strangerFriendly
+                    dvc.infoFromBreedWikipediaUrl = breeds[selectedRow].wikipediaUrl
                 }
             }
         }
