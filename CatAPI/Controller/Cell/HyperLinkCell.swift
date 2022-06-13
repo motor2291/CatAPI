@@ -11,10 +11,4 @@ class HyperLinkCell: UITableViewCell {
     
     @IBOutlet weak var wikiButton: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-
-    }
-    
 }

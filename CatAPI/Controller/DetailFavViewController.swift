@@ -12,6 +12,7 @@ class DetailFavViewController: UIViewController {
     @IBOutlet weak var favImageView: UIImageView!
     @IBAction func deleteButton(_ sender: UIBarButtonItem) {
         deleteFavData()
+        self.navigationController?.popViewController(animated: true)
     }
     
     var infoFromImageURL: URL?

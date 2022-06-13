@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SwiftUI
 
 protocol VoteManagerDelegate {
     func didUpdataImage(vote: VoteModel)

@@ -19,7 +19,6 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     var favouriteModel = [FavoriteModel]()
     
     override func viewDidLoad() {
-        fetchFavData()
         
         self.view.backgroundColor = UIColor.systemBackground
         let layout = UICollectionViewFlowLayout()
@@ -36,6 +35,14 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
         myCollectionView.delegate = self
         
         self.view.addSubview(myCollectionView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchFavData()
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
