@@ -41,8 +41,6 @@ class VoteViewController: UIViewController {
     @IBAction func dislikeButton(_ sender: UIButton) {
         voteManager.performRequest()
     }
-    
-    
 }
 
 //MARK: - VoteManageDelegate

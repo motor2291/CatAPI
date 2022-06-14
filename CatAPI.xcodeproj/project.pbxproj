@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9724704A2858562100888663 /* BreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972470492858562100888663 /* BreedTableViewCell.swift */; };
 		972FF0252840CCC90071AABE /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972FF0242840CCC90071AABE /* FavouriteModel.swift */; };
 		9731AB342837B6BC00A5BCAA /* BreedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */; };
 		978226462845C7D0006BB0D5 /* DetailFavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978226452845C7D0006BB0D5 /* DetailFavViewController.swift */; };
@@ -36,6 +37,7 @@
 		19CD2D7FA5889267AC57C7D8 /* Pods_CatAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA31DA268E8F9C7C0F3B22A /* Pods-CatAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAPI.debug.xcconfig"; path = "Target Support Files/Pods-CatAPI/Pods-CatAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		779EC8351C1872CCD18DD63B /* Pods-CatAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAPI.release.xcconfig"; path = "Target Support Files/Pods-CatAPI/Pods-CatAPI.release.xcconfig"; sourceTree = "<group>"; };
+		972470492858562100888663 /* BreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewCell.swift; sourceTree = "<group>"; };
 		972FF0242840CCC90071AABE /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
 		9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewController.swift; sourceTree = "<group>"; };
 		978226452845C7D0006BB0D5 /* DetailFavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavViewController.swift; sourceTree = "<group>"; };
@@ -77,10 +79,11 @@
 		978723C02853535900770FC9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */,
-				9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */,
+				972470492858562100888663 /* BreedTableViewCell.swift */,
 				978723C12853538F00770FC9 /* BreedDetailRatingCell.swift */,
 				97CF123A2854D80800BE082F /* HyperLinkCell.swift */,
+				9797BE71283A7AC400D79BEE /* ImageCollectionViewCell.swift */,
+				97BD6A602844A258003B7BF6 /* FavCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97CF123B2854D80800BE082F /* HyperLinkCell.swift in Sources */,
+				9724704A2858562100888663 /* BreedTableViewCell.swift in Sources */,
 				978E814428324DBC00EB953B /* FavViewController.swift in Sources */,
 				9797BE72283A7AC400D79BEE /* ImageCollectionViewCell.swift in Sources */,
 				978E813D28324C7000EB953B /* VoteViewController.swift in Sources */,
@@ -462,6 +466,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,6 +496,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

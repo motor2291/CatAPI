@@ -13,5 +13,4 @@ class BreedDetailRatingCell: UITableViewCell {
     @IBOutlet weak var itemLabel: UILabel!
     @IBOutlet weak var ratingStars: CosmosView!
     
-    
 }

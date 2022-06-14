@@ -33,9 +33,9 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UICollect
     let typeDictionary = ["All": "", "Static": "mime_types=jpg,png", "Animated": "mime_types=gif"]
     
     func fetchImageData(category: String, catType: String) {
-        let urlString = "\(baseURL)?apikey=\(apiKey)&limit=90&\(category)&\(catType)"
+        let urlString = "\(baseURL)?apikey=\(apiKey)&limit=30&\(category)&\(catType)"
 
-        let url = URL(string: urlString)!
+        guard let url = URL(string: urlString) else {return}
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let safeData = data {
                 do {

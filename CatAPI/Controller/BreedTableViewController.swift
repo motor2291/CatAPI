@@ -8,8 +8,9 @@
 import UIKit
 import Kingfisher
 
-class BreedTableViewController: UITableViewController, UISearchBarDelegate {
+class BreedTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var breedTableView: UITableView!
     var breeds = [BreedModel]()
     let baseURL = "https://api.thecatapi.com/v1/breeds"
     let apiKey = "3135a0e2-1fb4-4739-bac9-3cca33874ff0"
@@ -17,6 +18,9 @@ class BreedTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        breedTableView.delegate = self
+        breedTableView.dataSource = self
+        self.breedTableView.rowHeight = 100.0
         getBreedData()
     }
     
@@ -25,70 +29,50 @@ class BreedTableViewController: UITableViewController, UISearchBarDelegate {
         let urlString = "\(baseURL)?apikey=\(apiKey)"
         guard let url = URL(string: urlString) else {return}
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, response, error in
             if let safeData = data {
                 do {
                     let breeds = try JSONDecoder().decode([BreedModel].self, from: safeData)
                     self.breeds = breeds
                     DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                        self.breedTableView.reloadData()
                     }
                 } catch {
                     print(error)
                 }
             }
-        }
-        task.resume()
+        }.resume()
     }
 
-    
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return breeds.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "breedCell", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BreedTableViewCell.self), for: indexPath) as! BreedTableViewCell
         let breed = breeds[indexPath.row]
-        cell.textLabel?.text = breed.name
-        cell.detailTextLabel?.text = breed.temperament
+        cell.breedName?.text = breed.name
+        cell.breedTemperament?.text = breed.temperament
+        cell.breedImageView.kf.setImage(with: breed.image?.url)
         
-        if let imageURL = URL(string: breed.image?.url ?? "No Image") {
-            do {
-                let downloadImage = UIImage(data: try Data(contentsOf: imageURL))!
-                //cell.imageView?.kf.cancelDownloadTask()
-                cell.imageView?.image = imageWithImage(image: downloadImage , scaledToSize: CGSize(width: 100, height: 100))
-                
-            } catch {
-                print(error)
-            }
-        }
         return cell
     }
     
-    func imageWithImage(image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
-        
-        UIGraphicsBeginImageContext(newSize)
-        image.draw(in: CGRect(x: 0 ,y: 0 ,width: newSize.width ,height: newSize.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage!.withRenderingMode(.automatic)
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let dvc = segue.destination as? DetailViewController {
-                let selectedIndexPath = self.tableView.indexPathForSelectedRow
+                let selectedIndexPath = self.breedTableView.indexPathForSelectedRow
                 if let selectedRow = selectedIndexPath?.row {
                     dvc.infoFromBreedURL = breeds[selectedRow].image?.url
                     dvc.infoFromBreedName = breeds[selectedRow].name
@@ -107,5 +91,4 @@ class BreedTableViewController: UITableViewController, UISearchBarDelegate {
             }
         }
     }
-    
 }

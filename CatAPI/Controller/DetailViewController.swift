@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var infoFromBreedURL: String?
+    var infoFromBreedURL: URL?
     var infoFromBreedName: String?
     var infoFromBreedTemperament: String?
     var infoFromBreedDescription: String?
@@ -46,20 +47,9 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //        } else {
 //            breedDescription.text = infoFromBreedDescription
 //        }
-        updateImage()
-       
+        breedImage.kf.setImage(with: infoFromBreedURL)
     }
     
-    func updateImage() {
-        if let imageURL = URL(string: infoFromBreedURL ?? "No Image") {
-            do {
-                let downloadImage = UIImage(data: try Data(contentsOf: imageURL))
-                    self.breedImage.image = downloadImage
-            } catch {
-                print(error)
-            }
-        }
-    }
     //MARK: - UITableView Methods.
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

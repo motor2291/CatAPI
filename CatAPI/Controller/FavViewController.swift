@@ -41,8 +41,6 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewWillAppear(animated)
         
         fetchFavData()
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

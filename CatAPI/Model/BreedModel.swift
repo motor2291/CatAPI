@@ -66,7 +66,7 @@ struct BreedModel: Codable {
 struct BreedImage: Codable {
     let height: Int?
     let id: String?
-    let url: String?
+    let url: URL?
     let width: Int?
 }
 

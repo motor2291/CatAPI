@@ -33,18 +33,19 @@ class DetailFavViewController: UIViewController {
         var request = URLRequest(url: url)
         request.setValue("3135a0e2-1fb4-4739-bac9-3cca33874ff0", forHTTPHeaderField: "x-api-key")
         request.httpMethod = "DELETE"
-
+        
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
                 return
             }
+            
             do {
                 let response = try JSONSerialization.jsonObject(with: data, options: [])
                 print(response)
             } catch {
-                    print(error)
-                }
+                print(error)
+            }
         }.resume()
     }
 }
