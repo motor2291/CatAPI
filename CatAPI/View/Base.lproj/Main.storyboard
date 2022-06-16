@@ -37,40 +37,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kvQ-y3-kvn" customClass="GIFImageView" customModule="Gifu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvQ-y3-kvn" customClass="GIFImageView" customModule="Gifu">
                                 <rect key="frame" x="20" y="88" width="374" height="507"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="507" id="yTf-TO-5AA"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote your favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNv-KE-3vY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vote your favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNv-KE-3vY">
                                 <rect key="frame" x="20" y="603" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4R6-75-95F"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-v1-iG3">
-                                <rect key="frame" x="20" y="690" width="187" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="187" id="cQF-VV-DCR"/>
-                                    <constraint firstAttribute="height" constant="40" id="rZ7-5F-Tlh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="喜歡"/>
-                                <connections>
-                                    <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5di-4R-d2m"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-g2-5G3">
-                                <rect key="frame" x="207" y="690" width="187" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="9fe-3H-WOJ"/>
-                                    <constraint firstAttribute="width" constant="187" id="9vJ-3g-E2l"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-g2-5G3">
+                                <rect key="frame" x="218" y="690" width="176" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="不喜歡"/>
@@ -78,28 +58,26 @@
                                     <action selector="dislikeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcT-8m-GPg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-v1-iG3">
+                                <rect key="frame" x="20" y="690" width="179" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="喜歡"/>
+                                <connections>
+                                    <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5di-4R-d2m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="UNv-KE-3vY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Hv-7T-Mdk"/>
-                            <constraint firstItem="UNv-KE-3vY" firstAttribute="top" secondItem="kvQ-y3-kvn" secondAttribute="bottom" constant="8" id="CA0-69-5eG"/>
-                            <constraint firstItem="r6h-g2-5G3" firstAttribute="leading" secondItem="CgI-v1-iG3" secondAttribute="trailing" id="CSr-5s-RJc"/>
-                            <constraint firstItem="kvQ-y3-kvn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="507:896" id="Ga1-z5-qpr"/>
-                            <constraint firstItem="kvQ-y3-kvn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hli-Da-wIT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UNv-KE-3vY" secondAttribute="trailing" constant="20" id="J5W-jS-Dze"/>
-                            <constraint firstItem="CgI-v1-iG3" firstAttribute="top" secondItem="UNv-KE-3vY" secondAttribute="bottom" constant="37" id="Mva-En-96b"/>
-                            <constraint firstItem="CgI-v1-iG3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mx6-8u-nrC"/>
-                            <constraint firstItem="r6h-g2-5G3" firstAttribute="leading" secondItem="CgI-v1-iG3" secondAttribute="trailing" id="OIP-cr-oBh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kvQ-y3-kvn" secondAttribute="trailing" constant="20" id="Pr6-Rv-zgh"/>
-                            <constraint firstItem="kvQ-y3-kvn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RaG-l4-nLZ"/>
-                            <constraint firstItem="UNv-KE-3vY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="50:896" id="UeN-ZO-vlh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6h-g2-5G3" secondAttribute="trailing" constant="20" id="dIu-mg-1QT"/>
-                            <constraint firstItem="r6h-g2-5G3" firstAttribute="top" secondItem="UNv-KE-3vY" secondAttribute="bottom" constant="37" id="sDn-rr-eZJ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="投出你的最愛" id="h71-PS-llb">
-                        <barButtonItem key="leftBarButtonItem" image="text.justify" catalog="system" id="BMN-J7-zZf"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="text.justify" catalog="system" id="BMN-J7-zZf">
+                            <connections>
+                                <action selector="didTapMenuBtn:" destination="BYZ-38-t0r" id="AnE-hc-xuQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QD4-iG-DFw">
                             <connections>
                                 <action selector="refreshButton:" destination="BYZ-38-t0r" id="18i-ql-b3y"/>
@@ -264,12 +242,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="r04-T7-VRL">
+                            <searchBar contentMode="redraw" placeholder="find your favorite cat" translatesAutoresizingMaskIntoConstraints="NO" id="r04-T7-VRL">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="deE-TZ-cgw" id="5hS-3x-JqA"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JbM-Ms-PYT">
-                                <rect key="frame" x="0.0" y="139" width="414" height="680"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BreedTableViewCell" rowHeight="100" id="Wlt-n7-axg" customClass="BreedTableViewCell" customModule="CatAPI" customModuleProvider="target">
@@ -333,7 +314,7 @@
                         <viewLayoutGuide key="safeArea" id="9Ia-ed-23b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JbM-Ms-PYT" firstAttribute="height" secondItem="ahs-e5-3Ld" secondAttribute="height" multiplier="0.758929" id="EKT-Ic-SmT"/>
+                            <constraint firstAttribute="bottom" secondItem="JbM-Ms-PYT" secondAttribute="bottom" constant="83" id="Dz1-dU-Cac"/>
                             <constraint firstItem="JbM-Ms-PYT" firstAttribute="trailing" secondItem="9Ia-ed-23b" secondAttribute="trailing" id="Fj5-vu-EJW"/>
                             <constraint firstItem="r04-T7-VRL" firstAttribute="trailing" secondItem="9Ia-ed-23b" secondAttribute="trailing" id="O58-2e-6gB"/>
                             <constraint firstItem="JbM-Ms-PYT" firstAttribute="leading" secondItem="9Ia-ed-23b" secondAttribute="leading" id="jsg-gz-zPj"/>
@@ -345,6 +326,7 @@
                     <navigationItem key="navigationItem" title="貓咪圖鑑" id="2aU-UD-Ufe"/>
                     <connections>
                         <outlet property="breedTableView" destination="JbM-Ms-PYT" id="xo0-bK-nUn"/>
+                        <outlet property="searchBar" destination="r04-T7-VRL" id="VTo-rC-2Rp"/>
                         <segue destination="jGu-vd-pIU" kind="show" identifier="showDetail" id="lEo-bp-mmH"/>
                     </connections>
                 </viewController>
@@ -517,11 +499,15 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZRF-Ke-ep7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="投票" image="star.fill" catalog="system" id="zXn-gz-OkA"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="AAg-2r-gIs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UYq-Un-Uik">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ISA-Nu-qTO"/>
                     </connections>

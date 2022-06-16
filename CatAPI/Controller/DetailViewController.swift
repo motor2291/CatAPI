@@ -10,6 +10,7 @@ import Kingfisher
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var currentBreed: BreedModel!
     var infoFromBreedURL: URL?
     var infoFromBreedName: String?
     var infoFromBreedTemperament: String?

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97244BFA285B894A007E6477 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97244BF9285B894A007E6477 /* SettingsViewController.swift */; };
+		97244BFC285B89AD007E6477 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97244BFB285B89AD007E6477 /* InfoViewController.swift */; };
 		9724704A2858562100888663 /* BreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972470492858562100888663 /* BreedTableViewCell.swift */; };
 		972FF0252840CCC90071AABE /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972FF0242840CCC90071AABE /* FavouriteModel.swift */; };
 		9731AB342837B6BC00A5BCAA /* BreedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */; };
+		975E3291285B0D69009913AA /* MenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975E3290285B0D69009913AA /* MenuTableVC.swift */; };
+		975E3293285B1698009913AA /* CatTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975E3292285B1698009913AA /* CatTabBarController.swift */; };
 		978226462845C7D0006BB0D5 /* DetailFavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978226452845C7D0006BB0D5 /* DetailFavViewController.swift */; };
 		978723C22853538F00770FC9 /* BreedDetailRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978723C12853538F00770FC9 /* BreedDetailRatingCell.swift */; };
 		978D57FB28363C7C007DEE2E /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D57FA28363C7C007DEE2E /* BreedModel.swift */; };
@@ -37,9 +41,13 @@
 		19CD2D7FA5889267AC57C7D8 /* Pods_CatAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA31DA268E8F9C7C0F3B22A /* Pods-CatAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAPI.debug.xcconfig"; path = "Target Support Files/Pods-CatAPI/Pods-CatAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		779EC8351C1872CCD18DD63B /* Pods-CatAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAPI.release.xcconfig"; path = "Target Support Files/Pods-CatAPI/Pods-CatAPI.release.xcconfig"; sourceTree = "<group>"; };
+		97244BF9285B894A007E6477 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		97244BFB285B89AD007E6477 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		972470492858562100888663 /* BreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewCell.swift; sourceTree = "<group>"; };
 		972FF0242840CCC90071AABE /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
 		9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewController.swift; sourceTree = "<group>"; };
+		975E3290285B0D69009913AA /* MenuTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableVC.swift; sourceTree = "<group>"; };
+		975E3292285B1698009913AA /* CatTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTabBarController.swift; sourceTree = "<group>"; };
 		978226452845C7D0006BB0D5 /* DetailFavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavViewController.swift; sourceTree = "<group>"; };
 		978723C12853538F00770FC9 /* BreedDetailRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailRatingCell.swift; sourceTree = "<group>"; };
 		978D57FA28363C7C007DEE2E /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
@@ -76,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		975E328F285B0D3D009913AA /* Menu Comtroller */ = {
+			isa = PBXGroup;
+			children = (
+				975E3290285B0D69009913AA /* MenuTableVC.swift */,
+				97244BF9285B894A007E6477 /* SettingsViewController.swift */,
+				97244BFB285B89AD007E6477 /* InfoViewController.swift */,
+			);
+			path = "Menu Comtroller";
+			sourceTree = "<group>";
+		};
 		978723C02853535900770FC9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +150,7 @@
 		978E813528324AE700EB953B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				975E328F285B0D3D009913AA /* Menu Comtroller */,
 				978E813C28324C7000EB953B /* VoteViewController.swift */,
 				9731AB332837B6BC00A5BCAA /* BreedTableViewController.swift */,
 				97DC21F62837F03A00E45429 /* DetailViewController.swift */,
@@ -139,6 +158,7 @@
 				97DED00E283FC3FC0075AC2C /* DetailImageViewController.swift */,
 				978E814328324DBC00EB953B /* FavViewController.swift */,
 				978226452845C7D0006BB0D5 /* DetailFavViewController.swift */,
+				975E3292285B1698009913AA /* CatTabBarController.swift */,
 				978723C02853535900770FC9 /* Cell */,
 			);
 			path = Controller;
@@ -303,16 +323,20 @@
 				97DED00F283FC3FC0075AC2C /* DetailImageViewController.swift in Sources */,
 				972FF0252840CCC90071AABE /* FavouriteModel.swift in Sources */,
 				97BD6A612844A258003B7BF6 /* FavCollectionViewCell.swift in Sources */,
+				975E3293285B1698009913AA /* CatTabBarController.swift in Sources */,
 				978226462845C7D0006BB0D5 /* DetailFavViewController.swift in Sources */,
 				9731AB342837B6BC00A5BCAA /* BreedTableViewController.swift in Sources */,
 				978723C22853538F00770FC9 /* BreedDetailRatingCell.swift in Sources */,
+				97244BFA285B894A007E6477 /* SettingsViewController.swift in Sources */,
 				978E814228324D8900EB953B /* ImageViewController.swift in Sources */,
 				978E8121283244C600EB953B /* AppDelegate.swift in Sources */,
 				978E81462834D67700EB953B /* VoteModel.swift in Sources */,
 				97DC21F72837F03A00E45429 /* DetailViewController.swift in Sources */,
 				978D57FB28363C7C007DEE2E /* BreedModel.swift in Sources */,
 				9797BE87283A970800D79BEE /* ImageModel.swift in Sources */,
+				975E3291285B0D69009913AA /* MenuTableVC.swift in Sources */,
 				978E8123283244C600EB953B /* SceneDelegate.swift in Sources */,
+				97244BFC285B89AD007E6477 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

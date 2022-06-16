@@ -1,20 +1,20 @@
 PODS:
   - Cosmos (23.0.0)
-  - TinyConstraints (4.0.2)
+  - SideMenu (6.5.0)
 
 DEPENDENCIES:
   - Cosmos
-  - TinyConstraints
+  - SideMenu
 
 SPEC REPOS:
   trunk:
     - Cosmos
-    - TinyConstraints
+    - SideMenu
 
 SPEC CHECKSUMS:
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
-  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 8dacacfa5eba0becf3fd4710334724fe49325a72
+PODFILE CHECKSUM: 1ab70ba473481204dcb67519bf277d0fa0a2f71a
 
 COCOAPODS: 1.11.3

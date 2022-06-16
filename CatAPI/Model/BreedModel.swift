@@ -5,7 +5,6 @@
 //  Created by motor on 2022/5/19.
 //
 
-import Foundation
 import UIKit
 
 struct BreedModel: Codable {
