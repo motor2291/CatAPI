@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-94" y="155"/>
         </scene>
-        <!--投出你的最愛-->
+        <!--首頁-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VoteViewController" customModule="CatAPI" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,43 +37,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvQ-y3-kvn" customClass="GIFImageView" customModule="Gifu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kvQ-y3-kvn" customClass="GIFImageView" customModule="Gifu">
                                 <rect key="frame" x="20" y="88" width="374" height="507"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vote your favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNv-KE-3vY">
-                                <rect key="frame" x="20" y="603" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote your favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNv-KE-3vY">
+                                <rect key="frame" x="20" y="603" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-g2-5G3">
-                                <rect key="frame" x="218" y="690" width="176" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="不喜歡"/>
-                                <connections>
-                                    <action selector="dislikeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcT-8m-GPg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-v1-iG3">
-                                <rect key="frame" x="20" y="690" width="179" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="喜歡"/>
-                                <connections>
-                                    <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5di-4R-d2m"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="155" translatesAutoresizingMaskIntoConstraints="NO" id="B5J-zK-noG">
+                                <rect key="frame" x="66" y="696" width="282" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-v1-iG3">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CgI-v1-iG3" secondAttribute="height" multiplier="17:14" id="wl3-a5-eXb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="喜歡"/>
+                                        <connections>
+                                            <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5di-4R-d2m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-g2-5G3">
+                                        <rect key="frame" x="206" y="0.0" width="76" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="r6h-g2-5G3" secondAttribute="height" multiplier="38:21" id="TkC-9t-uFQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="不喜歡"/>
+                                        <connections>
+                                            <action selector="dislikeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcT-8m-GPg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kvQ-y3-kvn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D6v-8M-zQx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kvQ-y3-kvn" secondAttribute="trailing" constant="20" id="H9h-G2-qBN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UNv-KE-3vY" secondAttribute="trailing" constant="20" id="HH4-rf-nxG"/>
+                            <constraint firstItem="kvQ-y3-kvn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="I87-EI-UjV"/>
+                            <constraint firstItem="B5J-zK-noG" firstAttribute="top" secondItem="UNv-KE-3vY" secondAttribute="bottom" constant="57" id="MbM-Ej-PZJ"/>
+                            <constraint firstItem="B5J-zK-noG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="YiS-R1-fN0"/>
+                            <constraint firstItem="B5J-zK-noG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.046875" id="aDP-wz-LzI"/>
+                            <constraint firstItem="kvQ-y3-kvn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.565848" id="cE5-ME-ypq"/>
+                            <constraint firstItem="B5J-zK-noG" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.681159" id="cH5-NM-lm7"/>
+                            <constraint firstItem="UNv-KE-3vY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eSm-KN-G5d"/>
+                            <constraint firstItem="UNv-KE-3vY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0401786" id="lEJ-Vr-BFT"/>
+                            <constraint firstItem="UNv-KE-3vY" firstAttribute="top" secondItem="kvQ-y3-kvn" secondAttribute="bottom" constant="8" id="qAv-sd-Ltv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B5J-zK-noG" secondAttribute="trailing" constant="66" id="x3O-zI-2CA"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="投出你的最愛" id="h71-PS-llb">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" image="text.justify" catalog="system" id="BMN-J7-zZf">
+                    <navigationItem key="navigationItem" title="首頁" id="h71-PS-llb">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="square.grid.2x2.fill" catalog="system" id="BMN-J7-zZf">
                             <connections>
                                 <action selector="didTapMenuBtn:" destination="BYZ-38-t0r" id="AnE-hc-xuQ"/>
                             </connections>
@@ -493,11 +515,11 @@
             </objects>
             <point key="canvasLocation" x="3842.0289855072465" y="154.6875"/>
         </scene>
-        <!--投票-->
+        <!--首頁-->
         <scene sceneID="amK-07-tZE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZRF-Ke-ep7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="投票" image="star.fill" catalog="system" id="zXn-gz-OkA"/>
+                    <tabBarItem key="tabBarItem" title="首頁" image="star.fill" catalog="system" id="zXn-gz-OkA"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="AAg-2r-gIs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UYq-Un-Uik">
@@ -583,9 +605,9 @@
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
-        <image name="text.justify" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

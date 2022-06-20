@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "FFA8A8.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "catEmoji.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },

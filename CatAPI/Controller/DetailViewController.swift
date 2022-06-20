@@ -42,12 +42,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-//        if infoFromBreedHairless == true {
-//            breedDescription.text = infoFromBreedDescription?.appending("\n\nHairless")
-//        } else {
-//            breedDescription.text = infoFromBreedDescription
-//        }
         breedImage.kf.setImage(with: infoFromBreedURL)
     }
     
@@ -72,7 +66,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else if indexPath.row <= 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BreedDescriptionCell", for: indexPath)
-            cell.textLabel?.text = infoFromBreedDescription
+            if infoFromBreedHairless == true {
+                cell.textLabel?.text = infoFromBreedDescription?.appending("\n\nHairless")
+            } else {
+                cell.textLabel?.text = infoFromBreedDescription
+            }
             return cell
            
         } else if indexPath.row <= 8 {

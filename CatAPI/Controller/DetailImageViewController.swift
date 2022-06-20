@@ -49,5 +49,10 @@ class DetailImageViewController: UIViewController {
                     print(error)
                 }
         }.resume()
+        
+        let controller = UIAlertController(title: title, message: "已加入我的最愛", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "太棒了", style: .default, handler: nil)
+        controller.addAction(okAction)
+        present(controller, animated: true, completion: nil)
     }
 }

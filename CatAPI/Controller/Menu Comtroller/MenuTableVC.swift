@@ -6,16 +6,15 @@
 //
 
 import UIKit
-import SideMenu
 
 protocol MenuTableVCDelegate {
     func didSelectMenuItem(named: SideMenuItem)
 }
 
 enum SideMenuItem: String, CaseIterable {
-    case home = "Home"
-    case info = "Info"
-    case settings = "Settings"
+    case home = "首頁"
+    case theCatAPI = "CatAPI官網"
+    case privacyPolicy = "隱私權政策"
 }
 
 class MenuTableVC: UITableViewController {
@@ -62,4 +61,15 @@ class MenuTableVC: UITableViewController {
         delegate?.didSelectMenuItem(named: selectItem)
     }
     
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+        footerView.backgroundColor = color
+        let titleLabel = UILabel()
+        titleLabel.text = "版本 1.0"
+        titleLabel.textColor = UIColor.white
+        titleLabel.sizeToFit()
+        titleLabel.center = CGPoint(x: 46, y: 20)
+        footerView.addSubview(titleLabel)
+        return footerView
+    }
 }
