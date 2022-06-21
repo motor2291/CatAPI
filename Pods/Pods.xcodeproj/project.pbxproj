@@ -67,7 +67,7 @@
 /* Begin PBXFileReference section */
 		0155BA476B163ABEBCB0E108C318B7FE /* Pods-CatAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CatAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0269A6D3AA95337B227941134871C044 /* Pods-CatAPI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CatAPI-Info.plist"; sourceTree = "<group>"; };
-		05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		094C55A2228D11708DDD60EFCC4B0B17 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
 		0D6225A79FCFEB7217566A0E393997EA /* Pods-CatAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CatAPI-acknowledgements.plist"; sourceTree = "<group>"; };
 		119233A2CC8E7E72C2677A80F1C4FB46 /* Pods-CatAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CatAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		8C9098673C76EC5AB2960BACC08BFF85 /* SideMenuPushCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPushCoordinator.swift; path = Pod/Classes/SideMenuPushCoordinator.swift; sourceTree = "<group>"; };
 		8EB999084697A3CFA11049E0F96D8028 /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenu.modulemap; sourceTree = "<group>"; };
 		9458AA996F40070914314A2B3D3ADAA1 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E48BC408FFA4366822DB8DE191EF5EE /* SideMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenu-Info.plist"; sourceTree = "<group>"; };
 		A40A008C44E4E05D92CD65F4261FDB9D /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
 		AE0723733CA5922E53368AC1154EAFD9 /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
@@ -234,7 +234,6 @@
 				36F6C5717B5303EAF3115FC1CDB7F7EE /* UITableViewVibrantCell.swift */,
 				58F9AC57B8D49385148FC8E458D63242 /* Support Files */,
 			);
-			name = SideMenu;
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
@@ -258,7 +257,6 @@
 				2666173578CEB77CB24AFA98DAA270A4 /* StarLayer.swift */,
 				55896D6FA593014C6D9F61CF113EDEE6 /* Support Files */,
 			);
-			name = Cosmos;
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
@@ -293,7 +291,7 @@
 		F5F5060F9D74304426B0D838E7B505DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */,
+				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */,
 				7F5C168E36F28EE4B9960EBB5A5D06EE /* Pods-CatAPI */,
 				319D06AA0D1D0BA345459C039040A1ED /* SideMenu */,
 			);
@@ -345,7 +343,7 @@
 			);
 			name = Cosmos;
 			productName = Cosmos;
-			productReference = 05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */;
+			productReference = 05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */ = {
@@ -720,11 +718,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23B283ECACA828987C59DB2FAE378AD2 /* Cosmos.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -740,6 +742,8 @@
 				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
 				PRODUCT_MODULE_NAME = Cosmos;
 				PRODUCT_NAME = Cosmos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
