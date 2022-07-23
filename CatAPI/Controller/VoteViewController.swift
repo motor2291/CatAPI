@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import SideMenu
+import Firebase
 
 class VoteViewController: UIViewController, MenuTableVCDelegate {
     
@@ -19,6 +20,7 @@ class VoteViewController: UIViewController, MenuTableVCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let menu = MenuTableVC(with: SideMenuItem.allCases)
         menu.delegate = self
         sideMenu = SideMenuNavigationController(rootViewController: menu)
@@ -30,7 +32,7 @@ class VoteViewController: UIViewController, MenuTableVCDelegate {
         
         titleLabel.text = ""
         var charIndex = 0.0
-        let titleText = "點選喜歡加入您的最愛"
+        let titleText = "🐈點選喜歡加入您的最愛🐈‍⬛"
         for letter in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.2 * charIndex, repeats: false) { timer in
                 self.titleLabel.text?.append(letter)
@@ -39,13 +41,15 @@ class VoteViewController: UIViewController, MenuTableVCDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var catImage: UIImageView!
     @IBAction func likeButton(_ sender: UIButton) {
         saveFavData()
-        getImageData()
-    }
-    @IBAction func refreshButton(_ sender: UIBarButtonItem) {
         getImageData()
     }
     @IBAction func dislikeButton(_ sender: UIButton) {
