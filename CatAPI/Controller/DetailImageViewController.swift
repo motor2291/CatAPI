@@ -29,7 +29,8 @@ class DetailImageViewController: UIViewController {
     }
     
     func saveFavData() {
-        let json: [String: Any] = ["image_id": infoFromImageId!]
+        let loadedEmail = UserDefaults.standard.value(forKey: "userID")
+        let json: [String: Any] = ["image_id": infoFromImageId!, "sub_id": loadedEmail!]
         let url = URL(string: "https://api.thecatapi.com/v1/favourites")!
         var request = URLRequest(url: url)
         request.setValue("3135a0e2-1fb4-4739-bac9-3cca33874ff0", forHTTPHeaderField: "x-api-key")

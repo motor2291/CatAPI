@@ -18,9 +18,13 @@ class LoginViewController: UIViewController {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    print(e)
+                    let controller = UIAlertController(title: self.title, message: "\(e.localizedDescription)", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(okAction)
+                    self.present(controller, animated: true, completion: nil)
                 } else {
                     self.performSegue(withIdentifier: "LoginToHome", sender: self)
+                    UserDefaults.standard.set(email, forKey: "userID")
                 }
             }
         }

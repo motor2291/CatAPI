@@ -19,10 +19,15 @@ class RegisterViewController: UIViewController {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    print(e.localizedDescription)
+                    let controller = UIAlertController(title: self.title, message: "\(e.localizedDescription)", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    controller.addAction(okAction)
+                    self.present(controller, animated: true, completion: nil)
                 } else {
                     //Navigate to the VoteViewController
                     self.performSegue(withIdentifier: "RegisterToHome", sender: self)
+                    //Save Info to UserDefaults
+                    UserDefaults.standard.set(email, forKey: "userID")
                 }
             }
         }

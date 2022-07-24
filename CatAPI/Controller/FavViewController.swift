@@ -72,7 +72,8 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     func fetchFavData() {
-        let url = URL(string: "https://api.thecatapi.com/v1/favourites")
+        let loadedEmail = UserDefaults.standard.value(forKey: "userID")!
+        let url = URL(string: "https://api.thecatapi.com/v1/favourites?sub_id=\(loadedEmail)")
         var request = URLRequest(url: url!)
         request.setValue("3135a0e2-1fb4-4739-bac9-3cca33874ff0", forHTTPHeaderField: "x-api-key")
         

@@ -12,7 +12,7 @@ protocol MenuTableVCDelegate {
 }
 
 enum SideMenuItem: String, CaseIterable {
-    case home = "首頁"
+    case logOut = "登出"
     case theCatAPI = "CatAPI官網"
     case privacyPolicy = "隱私權政策"
 }
@@ -20,7 +20,6 @@ enum SideMenuItem: String, CaseIterable {
 class MenuTableVC: UITableViewController {
     
     public var delegate: MenuTableVCDelegate?
-    
     private let menuItems: [SideMenuItem]
     private let color = UIColor(displayP3Red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     
@@ -65,7 +64,7 @@ class MenuTableVC: UITableViewController {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
         footerView.backgroundColor = color
         let titleLabel = UILabel()
-        titleLabel.text = "版本 1.0"
+        titleLabel.text = "版本 1.1"
         titleLabel.textColor = UIColor.white
         titleLabel.sizeToFit()
         titleLabel.center = CGPoint(x: 46, y: 20)

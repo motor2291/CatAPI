@@ -39,7 +39,6 @@ class DetailFavViewController: UIViewController {
                 print(error?.localizedDescription ?? "No data")
                 return
             }
-            
             do {
                 let response = try JSONSerialization.jsonObject(with: data, options: [])
                 print(response)
