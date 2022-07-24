@@ -47,7 +47,7 @@ class TabBarViewController: UITabBarController, MenuTableVCDelegate {
         
         switch named {
         case .logOut:
-            infoController.view.isHidden = true
+            //infoController.view.isHidden = true
             do {
                 try Auth.auth().signOut()
                 navigationController?.popToRootViewController(animated: true)
